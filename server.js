@@ -29,13 +29,14 @@ const router = express.Router();
 var path = require("path");
 
 app.use(express.static(__dirname + "/dist"));
+app.set('view engine', 'ejs');
 
-app.engine(".html", require("ejs").renderFile);
+// app.engine(".html", require("ejs").renderFile);
 
 app.set('views', __dirname + "/dist");
 
 router.get('/*', (req, res, next) => {
-  res.sendFile("/dist/index.html"); 
+  res.render("index"); 
 });
 
 app.use('/', router);
