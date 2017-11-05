@@ -1,0 +1,22 @@
+{
+  "name": "vue-blog",
+  "version": "1.0.0",
+  "description": "Blog built with Vue",
+  "author": "TBP",
+  "scripts": {
+    "start": "node app.js",
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+ 
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
