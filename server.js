@@ -28,12 +28,12 @@ const port = process.env.PORT || 8080;
 const router = express.Router();
 var path = require("path");
 
-app.use(express.static(__dirname + "/dist"));
+app.use(express.static("./dist"));
 app.set('view engine', 'ejs');
 
 // app.engine(".html", require("ejs").renderFile);
 
-app.set('views', __dirname + "/dist");
+app.set("views", path.join(__dirname, "dist"))
 
 router.get('/*', (req, res, next) => {
   res.render("index"); 
