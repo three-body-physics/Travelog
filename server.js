@@ -35,10 +35,10 @@ app.set('view engine', 'ejs');
 
 app.set("views", path.join(__dirname, "dist"))
 
-router.get('/*', (req, res, next) => {
+router.get('*', (req, res, next) => {
   res.render("index"); 
 });
 
-app.use('/', router);
+app.use('*', router);
 
 app.listen(port);
