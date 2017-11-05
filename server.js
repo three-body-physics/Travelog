@@ -34,7 +34,7 @@ app.engine(".html", require("ejs").renderFile);
 app.set('views', __dirname + "/dist");
 
 router.get('/*', (req, res, next) => {
-  res.render("index");
+  res.sendFile(path.join(__dirname + "/dist/index.html")); 
 });
 
 app.use('/', router);
