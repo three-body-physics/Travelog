@@ -1,22 +1,15 @@
 {
-  "name": "vue-blog",
+  "name": "travel-diary",
   "version": "1.0.0",
-  "description": "Blog built with Vue",
-  "author": "TBP",
+  "description": "Travel blog built with Vue",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
+  "author": "TBP",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.15.4"
-  },
- 
-  "engines": {
-    "node": ">= 4.0.0",
-    "npm": ">= 3.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "express": "^4.16.2"
+  }
 }
