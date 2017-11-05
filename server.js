@@ -22,23 +22,36 @@
 //
 // var server = require('http').Server(app).listen(3000, "localhost");
 
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-const router = express.Router();
-var path = require("path");
+// const express = require('express');
+// const app = express();
+// const port = process.env.PORT || 8080;
+// const router = express.Router();
+// var path = require("path");
 
-app.use(express.static("./dist"));
-app.set('view engine', 'ejs');
+// app.use(express.static("./dist"));
+// app.set('view engine', 'ejs');
 
-// app.engine(".html", require("ejs").renderFile);
+// // app.engine(".html", require("ejs").renderFile);
 
-app.set("views", path.join(__dirname, "dist"))
+// app.set("views", path.join(__dirname, "dist"))
 
-router.get('/home', (req, res, next) => {
-  res.render("index"); 
-});
+// router.get('/home', (req, res, next) => {
+//   res.render("index"); 
+// });
 
-app.use('*', router);
+// app.use('*', router);
+
+// app.listen(port);
+
+
+var express = require('express');
+var path = require('path');
+var serveStatic = require('serve-static');
+var port = process.env.PORT || 5000;
+
+app = express();
+
+app.use(serveStatic(__dirname + "/dist"));
+
 
 app.listen(port);
