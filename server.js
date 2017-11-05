@@ -45,8 +45,6 @@ var allowCrossDomain = function(req, res, next) {
     }
 };
 
-app.use(allowCrossDomain);
-
 // app.engine(".html", require("ejs").renderFile);
 
 app.set("views", path.join(__dirname, "dist"))
@@ -55,6 +53,6 @@ router.get('/*', (req, res, next) => {
   res.render("index"); 
 });
 
-app.use('/', router);
+app.use('/', allowCrossDomain, router);
 
 app.listen(port);
